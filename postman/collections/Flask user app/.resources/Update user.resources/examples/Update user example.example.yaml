@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/users/update"
+  method: PUT
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+          "user_id": 2,
+          "name": "Jane Smith",
+          "email": "janesmith@gmail.com",
+          "phone": "0987654321",
+          "address": "Bliss Street, Beirut",
+          "country": "Lebanon"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+          "address": "Bliss Street, Beirut",
+          "country": "Lebanon",
+          "email": "janesmith@gmail.com",
+          "name": "Jane Smith",
+          "phone": "0987654321",
+          "user_id": 2
+      }
+order: 1000

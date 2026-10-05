@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{base_url}}/api/users/update"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        "user_id": 2,
+        "name": "Jane Smith",
+        "email": "janesmith@gmail.com",
+        "phone": "0987654321",
+        "address": "Bliss Street, Beirut",
+        "country": "Lebanon"
+    }
+examples: ./.resources/Update user.resources/examples
+order: 4000

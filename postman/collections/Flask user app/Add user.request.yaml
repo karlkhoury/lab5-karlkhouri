@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{base_url}}/api/users/add"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        "name": "Jane Smith",
+        "email": "janesmith@gmail.com",
+        "phone": "0123456789",
+        "address": "Hamra Street, Beirut",
+        "country": "Lebanon"
+    }
+examples: ./.resources/Add user.resources/examples
+order: 3000

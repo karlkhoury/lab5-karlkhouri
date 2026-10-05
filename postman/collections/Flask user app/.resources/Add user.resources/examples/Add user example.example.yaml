@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/users/add"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+          "name": "Jane Smith",
+          "email": "janesmith@gmail.com",
+          "phone": "0123456789",
+          "address": "Hamra Street, Beirut",
+          "country": "Lebanon"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+          "address": "Hamra Street, Beirut",
+          "country": "Lebanon",
+          "email": "janesmith@gmail.com",
+          "name": "Jane Smith",
+          "phone": "0123456789",
+          "user_id": 2
+      }
+order: 1000
